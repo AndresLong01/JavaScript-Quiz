@@ -22,3 +22,4 @@ That being said here was the changelog for this document:
 Known Bugs:
 
 1. Highscores section only stores the data of the most recent input, not multiple
+2. If you go straight into the Highscore section and input your initials it defaults your score to be 60.
