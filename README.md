@@ -17,7 +17,8 @@ That being said here was the changelog for this document:
 10. Added functionality to Navigation functions to navigate from the Main Menu to the Highscore table.
 11. Added a recorder to save the most recent submission into the highscore table.
 12. rendered out the scores on the page.
-13. Created a function to clear the scores
+13. Created a function to clear the scores.
+14. Fixed a few bugs including timer going into negative numbers giving you a negative score. (Lowest score possible should be 0).
 
 Known Bugs:
 

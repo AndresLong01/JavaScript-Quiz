@@ -87,8 +87,9 @@ function timerStart() {
         timeEl.textContent = countdown;
 
 
-        if (countdown === 0 || questionNumber === 6) {
+        if (countdown <= 0 || questionNumber === 6) {
             clearInterval(timerInterval);
+            timeEl.textContent = "";
             question.setAttribute("class", "hide");
             highscore.setAttribute("class", "container unhide bg-light mt-3 rounded");
         }
@@ -125,6 +126,9 @@ function recordHS(e) {
 
     var names = submission.value;
     var score = countdown;
+    if (score < 0){
+        score -= countdown;
+    }
     if (names === "") {
         displaySaved("incorrect", "Please enter your Initials!");
         return;
