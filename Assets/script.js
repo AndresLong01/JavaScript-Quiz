@@ -7,6 +7,7 @@ var mainMenu = document.getElementById("main");
 var content = document.getElementById("content");
 var timeEl = document.getElementById("time-left");
 var highscore = document.getElementById("highscore");
+var intermediate = document.getElementById("intermediate");
 //HTML Quiz Elements
 var question = document.getElementById("questions");
 var option1 = document.getElementById("option1");
@@ -91,7 +92,7 @@ function timerStart() {
             clearInterval(timerInterval);
             timeEl.textContent = "";
             question.setAttribute("class", "hide");
-            highscore.setAttribute("class", "container unhide bg-light mt-3 rounded");
+            intermediate.setAttribute("class", "container unhide bg-light mt-3 rounded");
         }
 
     }, 1000);
@@ -102,6 +103,7 @@ function toTables(e) {
     e.preventDefault();
     mainMenu.setAttribute("class", "hide");
     question.setAttribute("class", "hide");
+    intermediate.setAttribute("class", "hide");
     highscore.setAttribute("class", "container unhide bg-light mt-3 rounded");
 }
 
@@ -109,6 +111,7 @@ function toStart(e) {
     e.preventDefault();
     mainMenu.setAttribute("class", "container unhide bg-light mt-3 rounded");
     question.setAttribute("class", "hide");
+    intermediate.setAttribute("class", "hide");
     highscore.setAttribute("class", "hide");
     countdown = 60;
     questionNumber = 0;
@@ -124,6 +127,7 @@ function displaySaved(type, message) {
 function recordHS(e) {
     e.preventDefault();
 
+    
     var names = submission.value;
     var score = countdown;
     if (score < 0){
@@ -134,6 +138,8 @@ function recordHS(e) {
         return;
     } else {
         displaySaved("correct", "Input Saved!");
+        intermediate.setAttribute("class", "hide");
+        highscore.setAttribute("class", "container unhide bg-light mt-3 rounded");
     }
     localStorage.setItem("Initials", names);
     localStorage.setItem("Score", score);

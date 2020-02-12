@@ -19,8 +19,8 @@ That being said here was the changelog for this document:
 12. rendered out the scores on the page.
 13. Created a function to clear the scores.
 14. Fixed a few bugs including timer going into negative numbers giving you a negative score. (Lowest score possible should be 0).
+15. Formatted for smaller screens and phones.
 
 Known Bugs:
 
 1. Highscores section only stores the data of the most recent input, not multiple
-2. If you go straight into the Highscore section and input your initials it defaults your score to be 60.
