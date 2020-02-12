@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Assets/style.css">
+    <title>My Quiz</title>
+</head>
+
+<body>
+
+    <!--Top bar -->
+    <nav class="nav bg-dark">
+        <a class="nav-link active" href="#" id="tables">View Highscores</a>
+        <p class="offset-9 mt-2" style="color: whitesmoke;">Time Remaining: <span id="time-left"></span></p>
+    </nav>
+
+    <!--Default Display-->
+
+    <main class="container bg-light mt-3 rounded" id="main">
+        <h1 class="text-center">JavaScript Quiz!</h1>
+        <br>
+        <div class="row mt-2">
+            <div class="col text-center">
+                <h2>Welcome to my beginner level JavaScript Quiz! All of the following questions have a correct answer.
+                    If you choose the incorrect
+                    answer you will have 10 seconds deducted from your time remaining. Your score will be equal to the
+                    amount of time remaining so
+                    be careful!
+                </h2>
+                <br><br>
+                <button type="button" class="btn btn-dark mb-3" id="begin-quiz">Begin!</button>
+            </div>
+        </div>
+    </main>
+
+    <!--Quiz Option (Manipulated context)-->
+    <section class="container hide bg-light rounded" id="questions">
+        <div class="row mt-2">
+            <div class="col text-left">
+                <h2 id="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo ut assumenda id porro
+                    rem, dolor odio
+                    at magni, dolorum necessitatibus vitae repudiandae qui. Nemo amet voluptate ut, ad rem sunt.</h3>
+                    <button type="button" class="btn btn-dark mt-1" id="option1">Begin!</button> <br>
+                    <button type="button" class="btn btn-dark mt-1" id="option2">Begin!</button> <br>
+                    <button type="button" class="btn btn-dark mt-1" id="option3">Begin!</button> <br>
+                    <button type="button" class="btn btn-dark mt-1" id="option4">Begin!</button>
+                    <hr>
+                    <div id="msg"></div>
+            </div>
+        </div>
+    </section>
+
+    <!--Highscore Element-->
+    <section class="container hide bg-light rounded" id="highscore">
+        <div class="row mt-2">
+            <div class="col text-left">
+                <h3>Highscores</h3>
+                <br>
+                <div class="d-flex flex-column bd-highlight mb-3 bg-secondary" id="scoringTable">
+                </div>
+                <br>
+                <form class="form-inline">
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col col-form-label">Enter your initials: </label>
+                        <div class="col">
+                            <input type="text" class="form-control" id="initials" placeholder="JD">
+                        </div>
+                        <button type="submit" class="btn btn-dark col" id="initialsBtn">Submit</button>
+                    </div>
+                </form>
+                <div id="recorder"></div>
+                <hr>
+                <button type="button" class="btn btn-dark mb-2" id="goBack">Go Back to Start</button>
+                <button type="button" class="btn btn-dark mb-2" id="clear">Clear Highscores</button>
+            </div>
+        </div>
+    </section>
+    <script src="./Assets/script.js"></script>
+</body>
+
+</html>

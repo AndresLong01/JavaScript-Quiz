@@ -1,0 +1,19 @@
+body{
+    background-image: url(./Background.jpg);
+}
+.hide{
+    display: none;
+}
+.unhide{
+    display: block;
+}
+.correct{
+    color: lightgreen;
+}
+.incorrect{
+    color: crimson;
+}
+.fancy {
+    color: gold;
+    font-weight: bolder;
+}
