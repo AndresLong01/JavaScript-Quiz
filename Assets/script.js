@@ -145,7 +145,9 @@ function renderScores() {
     appendee.textContent = player + " - " + playerScore;
     scoreTable.appendChild(appendee);
 }
-renderScores();
+if(localStorage.getItem("Initials")!==null){
+    renderScores();
+}
 
 //Function to clear out the div
 function clearScores() {
